@@ -186,7 +186,7 @@ void reverseGuessingGame(int game, string username, int& min, int &max) {
 				guessed = true;
 			}
 		}
-		// If there is a difference of 1 between current min and max. There is only on possible option. 
+		// If highestMin and lowestMax are equal player decieved the computer. 
 		else if (highestMin == lowestMax)
 		{
 			cout << "Something is not right the number must be:  " << lowestMax <<  endl;
