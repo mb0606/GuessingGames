@@ -126,7 +126,7 @@ void reverseGuessingGame(int game, string username, int& min, int &max) {
 	do {
 
 		// highestMin < lowestMax  or user is lying.
-		if (highestMin < lowestMax && (lowestMax - highestMin) != 1) {
+		if (highestMin < lowestMax) {
 			do {
 				cout << "Please let me know if it is too high/low or if I guesses right. " << endl;
 				cout << "1 - Too low" << endl;
@@ -187,9 +187,9 @@ void reverseGuessingGame(int game, string username, int& min, int &max) {
 			}
 		}
 		// If there is a difference of 1 between current min and max. There is only on possible option. 
-		else if ((lowestMax - highestMin) == 1 && userGuidence != 3)
+		else if (highestMin == lowestMax)
 		{
-			cout << "Something is not right the number must be:  " << lowestMax + 1 <<  endl;
+			cout << "Something is not right the number must be:  " << lowestMax <<  endl;
 			attempts = MAX_ALLOWED_GUESSES;
 		}
 		// If current min and max crisscrossed the user is cheating.
