@@ -190,6 +190,7 @@ void reverseGuessingGame(int game, string username, int& min, int &max) {
 		else if (highestMin == lowestMax)
 		{
 			cout << "Something is not right the number must be:  " << lowestMax <<  endl;
+			cheating = true;
 			attempts = MAX_ALLOWED_GUESSES;
 		}
 		// If current min and max crisscrossed the user is cheating.
